@@ -126,9 +126,9 @@ class Issues extends AbstractApi
      * @param int $issue_iid
      * @return mixed
      */
-    public function showComments($project_id, $issue_iid)
+    public function showComments($project_id, $issue_iid, array $params = array())
     {
-        return $this->get($this->getProjectPath($project_id, 'issues/'.$this->encodePath($issue_iid)).'/notes');
+        return $this->get($this->getProjectPath($project_id, 'issues/'.$this->encodePath($issue_iid)).'/notes', $params);
     }
 
     /**
